@@ -57,6 +57,7 @@ public class Player : MonoBehaviour {
 	void SpawnBullet() {
 		GameObject bullet = Instantiate(bulletPrefab, transform.position + bulletSpawn, Quaternion.identity);
 		bullet.GetComponent<Bullet>().Init(true, bulletSpeed * Vector2.up);
+		Destroy(bullet, 1f);
 	}
 
 	void Bomb() {

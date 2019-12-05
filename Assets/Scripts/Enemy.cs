@@ -5,7 +5,6 @@ public class Enemy : MonoBehaviour {
 	public int health;
 
 	void OnCollisionEnter2D(Collision2D other) {
-		Debug.Log("boop");
 		if (!other.gameObject.GetComponent<Bullet>()) return;
 		
 		health--;
